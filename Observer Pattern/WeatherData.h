@@ -8,7 +8,7 @@ public:
 
 	WeatherData() : temperature(0), humidity(0), pressure(0) {};
 
-	void changeMeasurements(float temp, float humidity, float pressure) {
+	void changeMeasurements(const float temp, const float humidity, const float pressure) {
 		this->temperature = temp;
 		this->humidity = humidity;
 		this->pressure = pressure;
@@ -29,15 +29,15 @@ public:
 		observers.erase(observer);
 	}	
 
-	float getTemperature() {
+	const float getTemperature() {
 		return temperature;
 	}
 
-	float getHumidity() {
+	const float getHumidity() {
 		return humidity;
 	}
 
-	float getPressure() {
+	const float getPressure() {
 		return pressure;
 	}
 
