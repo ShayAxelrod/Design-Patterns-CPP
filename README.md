@@ -15,6 +15,7 @@ _This example is inspired from the book **[Head First: Design Patterns Second Ed
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <algorithm>
 #include "MallardDuck.h"
 #include "RubberDuck.h"
 #include "DecoyDuck.h"
@@ -31,11 +32,11 @@ int main() {
     ducks.push_back(rubber);
     ducks.push_back(decoy);
 
-    for (auto duck : ducks) {
+    for_each(ducks.begin(), ducks.end(), [](shared_ptr<Duck> duck) {
         duck->display();
         duck->performFly();
         duck->performQuack();
-    }
+    });
 
     return 0;
 }
