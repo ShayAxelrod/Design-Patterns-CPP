@@ -8,7 +8,7 @@
 
 <img src="Observer Pattern.png" title="Class Diagram Image">
 
-_These examples are from the book **Head First: Design Patterns Second Edition**_
+_These examples are from the book **[Head First: Design Patterns Second Edition](https://www.amazon.com/dp/149207800X/ref=cm_sw_em_r_mt_dp_SZN9DWRD8Y55S5CZW5K5?_encoding=UTF8&psc=1 )**_
 
 **Observer Pattern.cpp**
 ```c++
