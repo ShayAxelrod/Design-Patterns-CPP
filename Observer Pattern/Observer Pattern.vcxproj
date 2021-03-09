@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{53c4bbae-1d93-4aca-a81d-0484f3159ede}</ProjectGuid>
-    <RootNamespace>StrategyPattern</RootNamespace>
+    <ProjectGuid>{7b8c55dc-fe03-43a2-bcc7-25d1b308013a}</ProjectGuid>
+    <RootNamespace>ObserverPattern</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,20 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Strategy Pattern.cpp" />
-    <ClCompile Include="MallardDuck.h" />
+    <ClCompile Include="Observer Pattern.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DecoyDuck.h" />
-    <ClInclude Include="Duck.h" />
-    <ClInclude Include="IFlyBehavior.h" />
-    <ClInclude Include="FlyNoWay.h" />
-    <ClInclude Include="FlyWithWings.h" />
-    <ClInclude Include="MuteQuack.h" />
-    <ClInclude Include="Quack.h" />
-    <ClInclude Include="IQuackBehavior.h" />
-    <ClInclude Include="RubberDuck.h" />
-    <ClInclude Include="Squeak.h" />
+    <ClInclude Include="CurrentConditionsDisplay.h" />
+    <ClInclude Include="ForecastDisplay.h" />
+    <ClInclude Include="IObserver.h" />
+    <ClInclude Include="ISubject.h" />
+    <ClInclude Include="WeatherData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,54 +1,45 @@
-# Strategy Pattern 🦆
+# Observer Pattern 🦆
 
-*Also Known As (Policy)*
+*Also Known As (Dependents, Publish-Subscribe)*
 
-> Definition: Define a family of algorithms, encapsulate each one, and make them interchangable. Strategy lets the algorithm vary independently from clients that use it.
+> Definition: Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 
 
 
-<img src="Strategy Pattern.png" title="Class Diagram Image">
+<img src="Observer Pattern.png" title="Class Diagram Image">
 
 _These examples are from the book **Head First: Design Patterns Second Edition**_
 
-**Strategy Pattern.cpp**
+**Observer Pattern.cpp**
 ```c++
 #include <iostream>
 #include <memory>
-#include <vector>
-#include "MallardDuck.h"
-#include "RubberDuck.h"
-#include "DecoyDuck.h"
+#include "WeatherData.h"
+#include "CurrentConditionsDisplay.h"
+#include "ForecastDisplay.h"
 
 using namespace std;
 
 int main() {
-    vector<shared_ptr<Duck>> ducks;
-    shared_ptr<Duck> mallard = make_shared<MallardDuck>();
-    shared_ptr<Duck> rubber = make_shared<RubberDuck>();
-    shared_ptr<Duck> decoy = make_shared<DecoyDuck>();    
+    
+    shared_ptr<WeatherData> weatherStation = make_shared<WeatherData>();
+    unique_ptr<CurrentConditionsDisplay> currentConditionsDisplay = make_unique<CurrentConditionsDisplay>(weatherStation);
+    unique_ptr<ForecastDisplay> forecastDisplay = make_unique<ForecastDisplay>(weatherStation);
 
-    ducks.push_back(mallard);
-    ducks.push_back(rubber);
-    ducks.push_back(decoy);
+    weatherStation->changeMeasurements(90, 2, 1);
+    weatherStation->changeMeasurements(76, 12, 5);
 
-    for (auto duck : ducks) {
-        duck->display();
-        duck->performFly();
-        duck->performQuack();
-    }
+    forecastDisplay->unsubscribe();
+    weatherStation->changeMeasurements(105, 6, 3);
 
     return 0;
 }
 ```
 **Console:**
 ```
-I'm a MallardDuck.
-I can fly.
-Quack!
-I'm a RubberDuck.
-I can't fly.
-Squeak!
-I'm a DecoyDuck.
-I can't fly.
-I make no sound!
+CurrentConditionsDisplay: Temp is 90, Humidity is 2
+ForecastDisplay: Temp is 90, Pressure is 1
+CurrentConditionsDisplay: Temp is 76, Humidity is 12
+ForecastDisplay: Temp is 76, Pressure is 5
+CurrentConditionsDisplay: Temp is 105, Humidity is 6
 ```
