@@ -1,4 +1,4 @@
-# Observer Pattern 🦆
+# Observer Pattern ☁🌡
 
 *Also Known As (Dependents, Publish-Subscribe)*
 
