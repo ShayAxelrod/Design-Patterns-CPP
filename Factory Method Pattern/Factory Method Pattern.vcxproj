@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{7b8c55dc-fe03-43a2-bcc7-25d1b308013a}</ProjectGuid>
-    <RootNamespace>ObserverPattern</RootNamespace>
+    <RootNamespace>FactoryMethodPattern</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,14 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Observer Pattern.cpp" />
+    <ClCompile Include="Factory Method Pattern.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CurrentConditionsDisplay.h" />
-    <ClInclude Include="ForecastDisplay.h" />
-    <ClInclude Include="IObserver.h" />
-    <ClInclude Include="ISubject.h" />
-    <ClInclude Include="WeatherData.h" />
+    <ClInclude Include="ChicagoPizzaStore.h" />
+    <ClInclude Include="ChicagoStylePepperoniPizza.h" />
+    <ClInclude Include="ChicagoStyleCheesePizza.h" />
+    <ClInclude Include="NYPizzaStore.h" />
+    <ClInclude Include="NYStyleCheesePizza.h" />
+    <ClInclude Include="NYStylePepperoniPizza.h" />
+    <ClInclude Include="IPizza.h" />
+    <ClInclude Include="IPizzaStore.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
