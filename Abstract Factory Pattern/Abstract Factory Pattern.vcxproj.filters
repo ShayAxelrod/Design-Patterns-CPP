@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\AbstractFactory">
+      <UniqueIdentifier>{16a1624e-d693-4ab1-a392-d37eeb4a3fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AbstractFactory\ConcreteFactory">
+      <UniqueIdentifier>{bf52ad79-3d53-4fd9-985c-a2ceae07b925}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AbstractProductCheese">
+      <UniqueIdentifier>{df5565c8-cfb2-4eca-874c-c4e3edc355d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AbstractProductDough">
+      <UniqueIdentifier>{962a0b23-945e-4138-bc35-6c19ebbb97c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AbstractProductCheese\ProductCheese">
+      <UniqueIdentifier>{5db2311d-3756-49dc-ad59-c1162317a193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AbstractProductDough\ProductDough">
+      <UniqueIdentifier>{467ee8d2-f5a5-4532-8eb0-e229b1b01f92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pizzas">
+      <UniqueIdentifier>{4decc5da-d1ee-446a-8cdd-78232c5e5c78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pizzas\ConcreteProduct">
+      <UniqueIdentifier>{b25db79d-78f4-4d61-88f5-9b5bf37aac75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stores">
+      <UniqueIdentifier>{b003d100-3005-4a21-86db-2ed68e642e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stores\ConcreteStores">
+      <UniqueIdentifier>{e9e0b7b7-7c88-4951-a52b-1d077d01457e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Abstract Factory Pattern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IPizzaIngredientFactory.h">
+      <Filter>Source Files\AbstractFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="NYPizzaIngredientFactory.h">
+      <Filter>Source Files\AbstractFactory\ConcreteFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="ChicagoPizzaIngredientFactory.h">
+      <Filter>Source Files\AbstractFactory\ConcreteFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="ICheese.h">
+      <Filter>Source Files\AbstractProductCheese</Filter>
+    </ClInclude>
+    <ClInclude Include="ReggianoCheese.h">
+      <Filter>Source Files\AbstractProductCheese\ProductCheese</Filter>
+    </ClInclude>
+    <ClInclude Include="MozzarellaCheese.h">
+      <Filter>Source Files\AbstractProductCheese\ProductCheese</Filter>
+    </ClInclude>
+    <ClInclude Include="IDough.h">
+      <Filter>Source Files\AbstractProductDough</Filter>
+    </ClInclude>
+    <ClInclude Include="ThinCrustDough.h">
+      <Filter>Source Files\AbstractProductDough\ProductDough</Filter>
+    </ClInclude>
+    <ClInclude Include="ThickCrustDough.h">
+      <Filter>Source Files\AbstractProductDough\ProductDough</Filter>
+    </ClInclude>
+    <ClInclude Include="IPizza.h">
+      <Filter>Source Files\Pizzas</Filter>
+    </ClInclude>
+    <ClInclude Include="CheesePizza.h">
+      <Filter>Source Files\Pizzas\ConcreteProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="IPizzaStore.h">
+      <Filter>Source Files\Stores</Filter>
+    </ClInclude>
+    <ClInclude Include="NYPizzaStore.h">
+      <Filter>Source Files\Stores\ConcreteStores</Filter>
+    </ClInclude>
+    <ClInclude Include="PepperoniPizza.h">
+      <Filter>Source Files\Pizzas\ConcreteProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="ChicagoPizzaStore.h">
+      <Filter>Source Files\Stores\ConcreteStores</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

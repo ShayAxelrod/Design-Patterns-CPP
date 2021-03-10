@@ -1,9 +1,7 @@
 #include <iostream>
 #include <memory>
-#include "IPizzaStore.h"
 #include "NYPizzaStore.h"
 #include "ChicagoPizzaStore.h"
-#include "IPizza.h"
 
 using namespace std;
 

@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{7b8c55dc-fe03-43a2-bcc7-25d1b308013a}</ProjectGuid>
-    <RootNamespace>FactoryMethodPattern</RootNamespace>
+    <RootNamespace>AbstractFactoryPattern</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,17 +139,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Factory Method Pattern.cpp" />
+    <ClCompile Include="Abstract Factory Pattern.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CheesePizza.h" />
     <ClInclude Include="ChicagoPizzaStore.h" />
-    <ClInclude Include="ChicagoStylePepperoniPizza.h" />
-    <ClInclude Include="ChicagoStyleCheesePizza.h" />
-    <ClInclude Include="NYPizzaStore.h" />
-    <ClInclude Include="NYStyleCheesePizza.h" />
-    <ClInclude Include="NYStylePepperoniPizza.h" />
+    <ClInclude Include="ChicagoPizzaIngredientFactory.h" />
+    <ClInclude Include="ICheese.h" />
+    <ClInclude Include="IDough.h" />
     <ClInclude Include="IPizza.h" />
     <ClInclude Include="IPizzaStore.h" />
+    <ClInclude Include="MozzarellaCheese.h" />
+    <ClInclude Include="NYPizzaIngredientFactory.h" />
+    <ClInclude Include="IPizzaIngredientFactory.h" />
+    <ClInclude Include="NYPizzaStore.h" />
+    <ClInclude Include="PepperoniPizza.h" />
+    <ClInclude Include="ReggianoCheese.h" />
+    <ClInclude Include="ThickCrustDough.h" />
+    <ClInclude Include="ThinCrustDough.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

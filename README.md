@@ -1,23 +1,21 @@
-# Factory Method Pattern 🍕
+# Abstract Factory Pattern 🍕
 
-*Also Known As (Virtual Constructor)*
+*Also Known As (Kit)*
 
-> Definition: Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+> Definition: Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 
 
 
-<img src="Factory Method Pattern.png" title="Class Diagram Image">
+<img src="Abstract Factory Pattern.png" title="Class Diagram Image">
 
 _This example is inspired from the book **[Head First: Design Patterns Second Edition](https://www.amazon.com/dp/149207800X/ref=cm_sw_em_r_mt_dp_SZN9DWRD8Y55S5CZW5K5?_encoding=UTF8&psc=1 )**_
 
-**Factory Method Pattern.cpp**
+**Abstract Factory Pattern.cpp**
 ```c++
 #include <iostream>
 #include <memory>
-#include "IPizzaStore.h"
 #include "NYPizzaStore.h"
 #include "ChicagoPizzaStore.h"
-#include "IPizza.h"
 
 using namespace std;
 
@@ -36,27 +34,20 @@ int main() {
 
     return 0;
 }
-
 ```
 **Console:**
 ```
-Preparing NY Style Sauce and Cheese Pizza
-Tossing dough...
-Adding sauce
-Adding toppings
-Grated Reggiano Cheese
+Preparing New York Style Cheese Pizza
+Dough: Thin Crust, Cheese: Reggiano
 Bake for 25 minutes at 350
 Cutting the pizza into diagonal slices
 Place pizza in official PizzaStore box
-Ethan ordered a NY Style Sauce and Cheese Pizza
+Ethan ordered a New York Style Cheese Pizza
 
-Preparing Chicago Style Deep Dish Cheese Pizza
-Tossing dough...
-Adding sauce
-Adding toppings
-Shredded Mozzarella Cheese
+Preparing Chicago Style Cheese Pizza
+Dough: Thick Crust, Cheese: Mozzarella
 Bake for 25 minutes at 350
-Cutting the pizza into square slices
+Cutting the pizza into diagonal slices
 Place pizza in official PizzaStore box
-Joel ordered a Chicago Style Deep Dish Cheese Pizza
+Joel ordered a Chicago Style Cheese Pizza
 ```
